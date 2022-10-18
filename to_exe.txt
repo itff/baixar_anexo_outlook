@@ -1,0 +1,4 @@
+Abrir Anaconda Prompt
+
+> cd C:\Users\ab1416392\Desktop\Python Apps\app_baixar_anexo_outlook
+> pyinstaller --name="App_Baixar_Anexos_Email" --windowed --onefile app.py

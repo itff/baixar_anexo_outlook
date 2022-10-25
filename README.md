@@ -1,16 +1,13 @@
-IMPORTANT WARNING
-=================
-
-Note: This project currently uses nodemailer, which seems to suffer from, or benefit from,
-a tightening of security in Node itself.  This is well-documented, but a little obscure.
-It manifests itself as an error concerning Self-signed SSL Certificates.  We made the
-documented hack and got it working.
-
-However, I doubt this code will work out-of-the-box for you unless you make the same hack
-after install nodemailer.
-
-Mario : What is this project?
+Baixar Anexos do Outlook
 =====
+
+É um aplicativo feito no python utilizando qt
+
+
+
+
+
+
 
 The basic purpose of Mario is to support the email processing of the
 Communicart (C2) diet.  We are using Mario as the Node.js-based mail

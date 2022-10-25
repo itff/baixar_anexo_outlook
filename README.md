@@ -1,69 +1,13 @@
 Baixar Anexos do Outlook
 =====
 
-É um aplicativo feito no python utilizando qt
+É um aplicativo feito no python utilizando PyQt5, para a interface gráfica, e win32com.client, para conectar no Outlook do Windows.
+Ele foi feito com o objetivo de baixar todos os anexos de acordo com os filtros nos e-mails do Outlook.
 
 
-
-
-
-
-
-The basic purpose of Mario is to support the email processing of the
-Communicart (C2) diet.  We are using Mario as the Node.js-based mail
-reader.  It also invokes the [gsa-advantage-scraper](https://github.com/18F/gsa-advantage-scrape).
-
-We could have implemented this in the C2 rails application, and may
-still move that feature there.
-
-The basic execution of Mario is that you execute it once, which reads
-any unread mail.  We use a cron job to run it every minute.
-
-This architecture allow us to keep C2 independent of the GSA
-Advantage.
-
-How to Install Mario
+Como Executar
 ===================
 
-1. Install Node.js 0.10
-1. Run `npm install`.
-1. Copy [`configs.js.EXAMPLE`](configs.js.EXAMPLE) to `configs.js` and adjust the values
-there.
-
-In particular, Mario is meant to be installed on the same server with
-[C2](https://github.com/18F/C2), and the path to the shared constants file in C2 should be set in
-`C2_APPLICATION_YML_PATH`.
-
-Mario needs these variable to be set into the environment where
-it runs:
-
-```bash
-NODE_ENV # (optional) can be set to 'debug' or 'development'
-
-GSA_USERNAME # username for GSA Advantage for the scraper
-GSA_PASSWORD # password used by the scraper to pass to GSA Advantage
-
-DYNO_CART_SENDER # email address to read from
-COMMUNICART_DOT_SENDER # password for the DYNO_CART_SENDER email
-
-C2_SERVER_ENDPOINT # domain that points to the C2 API
-C2_API_KEY # API key assigned to your application for accessing the C2 API. To request a key, please contact <communicart-info@gsa.gov>
-```
-
-This mechanism avoids the danger of setting a password in the repo and
-accidentally committing it.
-
-Although Mario can be used in a number of ways, we normally use a
-crontab job to run it once a minute.  The job actually implements a
-shell scripts which ensures the environmental variables are correctly
-exported, and then Mario is invoked, piping the output to a log file.
-
-For debugging, you can of course invoke it by hand.  Additionally,
-there is a flag not to mark email as unread, which allows repetitive
-execution without a need to recreate the initiating emails.
-
-
-How to Test Mario
-=======
-
-To run the test suite, run `npm test`. To check code coverage, run `npm run-script coverage`.
+Tem duas formas:
+- Baixe a pasta App e abra o app.exe
+- Baixe a pasta code e execute no Python o app.py

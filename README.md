@@ -10,6 +10,17 @@ Como Executar
 ===================
 
 Tem duas formas:
-- Baixe a pasta App e abra o app.exe
+- Abra o executável App_Baixar_Anexos_Email.exe
 - Baixe a pasta code e execute no Python o app.py
 
+Como criar o Executável
+===================
+
+- Abra o Anaconda Prompt
+- Mude o diretório para a pasta com o app.py com o *cd C:\\*
+- Rode:
+```
+pyinstaller --name="App_Baixar_Anexos_Email" --windowed --onefile app.py
+```
+
+*Precisa ter o Anaconda instalado.*
